@@ -1,0 +1,12 @@
+<?php
+
+if ($handle = opendir(__DIR__ .'/files')) {
+    while (false !== ($entry = readdir($handle))) {
+        if ($entry != "." && $entry != "..") {
+            echo "$entry</br>";
+        }
+    }
+    }
+closedir($handle); 
+
+?>
